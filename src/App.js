@@ -26,22 +26,27 @@ function App() {
     
     <div className="App">
 
-      <form onSubmit={enviarDatos}>
-        <label>Id</label>
-        <input type="number" value={id} onChange={e => setId(e.target.value)} />
+      <form onSubmit={enviarDatos} >
+     
+        <label >Id</label>
+        <input  type="number" value={id} onChange={e => setId(e.target.value)} />
+        <br/>
         <label>Nombre</label>
         <input type="text" value={nombre} onChange={e => setNombre(e.target.value)} />
+        <br/>
         <label>Email</label>
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
+        <br/>
         <label>Ahorro</label>
         <input type="number" value={ahorro} onChange={e => setAhorro(e.target.value)} />
-        <button type="submit">Enviar</button>
+        <br/>
+        <button type="submit" className='btn btn-primary'>Enviar</button>
       </form>
 
 
       <Tabla usuarios={usuarios} />
 
-      <Tabla usuarios={usuarios} />
+     
 
     </div>
   );
